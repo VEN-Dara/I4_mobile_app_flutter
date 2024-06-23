@@ -54,33 +54,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
             IconButton(
               onPressed: () {
                 setState(() {
-                  cuttentIndex = 0;
-                });
-              },
-              icon: Icon(
-                Icons.grid_view_outlined,
-                size: 30,
-                color: cuttentIndex == 0 ? kprimaryColor : Colors.grey.shade400,
-              ),
-            ),
-            IconButton(
-              onPressed: () {
-                setState(() {
-                  cuttentIndex = 1;
-                });
-              },
-              icon: Icon(
-                Icons.favorite_border,
-                size: 30,
-                color: cuttentIndex == 1 ? kprimaryColor : Colors.grey.shade400,
-              ),
-            ),
-            const SizedBox(
-              width: 15,
-            ),
-            IconButton(
-              onPressed: () {
-                setState(() {
                   cuttentIndex = 3;
                 });
               },

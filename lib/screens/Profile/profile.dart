@@ -25,8 +25,7 @@ class Profile extends StatelessWidget {
                 ),
                 child: Container(
                   height: size.height * 0.4,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 15),
                   child: Column(
                     children: [
                       Padding(
@@ -41,8 +40,7 @@ class Profile extends StatelessWidget {
                                   children: [
                                     const CircleAvatar(
                                       radius: 42,
-                                      backgroundImage:
-                                          AssetImage("images/profile3.png"),
+                                      backgroundImage: AssetImage("images/profile3.png"),
                                     ),
                                     Positioned(
                                       bottom: 0,
@@ -52,8 +50,7 @@ class Profile extends StatelessWidget {
                                         width: 25,
                                         decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
-                                          color:
-                                              Color.fromARGB(255, 95, 225, 99),
+                                          color: Color.fromARGB(255, 95, 225, 99),
                                         ),
                                         child: const Icon(
                                           Icons.check,
@@ -68,17 +65,16 @@ class Profile extends StatelessWidget {
                                   children: [
                                     Container(
                                       decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          border: Border.all(
-                                              color: Colors.black54)),
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 9, horizontal: 12),
+                                        borderRadius: BorderRadius.circular(20),
+                                        border: Border.all(color: Colors.black54),
+                                      ),
+                                      padding: const EdgeInsets.symmetric(vertical: 9, horizontal: 12),
                                       child: const Text(
                                         "ADD FRIEND",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15,
+                                        ),
                                       ),
                                     ),
                                     const SizedBox(width: 8),
@@ -87,8 +83,7 @@ class Profile extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(20),
                                         color: Colors.pink,
                                       ),
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 8, horizontal: 12),
+                                      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                                       child: const Text(
                                         "Follow",
                                         style: TextStyle(
@@ -97,14 +92,14 @@ class Profile extends StatelessWidget {
                                           color: Colors.white,
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
-                                )
+                                ),
                               ],
                             ),
                             const SizedBox(height: 10),
                             const Text(
-                              "Winnie Vasquez",
+                              "VEN Dara",
                               style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 fontSize: 35,
@@ -113,37 +108,32 @@ class Profile extends StatelessWidget {
                             const Text(
                               "Flutter Developer",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 16,
-                                  color: Colors.black45),
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            const Text(
-                              "A Flutter developer is a software engineer who has proficiency with the Flutter framework to develop mobile, web,",
-                              style: TextStyle(
+                                fontWeight: FontWeight.w800,
                                 fontSize: 16,
+                                color: Colors.black45,
                               ),
                             ),
+                            const SizedBox(height: 15),
+                            const Text(
+                              "A Flutter developer is a software engineer who has proficiency with the Flutter framework.",
+                              style: TextStyle(fontSize: 16),
+                            ),
                           ],
                         ),
                       ),
-                      const Spacer(),
-                      const Divider(
-                        color: Colors.black12,
-                      ),
-                      SizedBox(
-                        height: 65,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            friendAndMore("FRIENDS", "2318"),
-                            friendAndMore("FOLLOWING", "364"),
-                            friendAndMore("FOLLOWER", "175"),
-                          ],
-                        ),
-                      ),
+                      // const Spacer(),
+                      // const Divider(color: Colors.black12),
+                      // SizedBox(
+                      //   height: 65,
+                      //   child: Row(
+                      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      //     children: [
+                      //       Expanded(child: friendAndMore("FRIENDS", "2318")),
+                      //       Expanded(child: friendAndMore("FOLLOWING", "364")),
+                      //       Expanded(child: friendAndMore("FOLLOWER", "175")),
+                      //     ],
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
@@ -155,28 +145,27 @@ class Profile extends StatelessWidget {
     );
   }
 
-  SizedBox friendAndMore(title, number) {
-    return SizedBox(
-      width: 110,
-      child: Column(
-        children: [
-          Text(
-            title,
-            style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-                color: Colors.black26),
+  Widget friendAndMore(String title, String number) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 14,
+            color: Colors.black26,
           ),
-          Text(
-            number,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 25,
-              color: Colors.black,
-            ),
-          )
-        ],
-      ),
+        ),
+        Text(
+          number,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+            color: Colors.black,
+          ),
+        ),
+      ],
     );
   }
 }
